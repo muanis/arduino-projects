@@ -1,0 +1,39 @@
+#######################################
+# Syntax Coloring Map For Matrix
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+EtherShield KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+ES_fill_tcp_data_p	KEYWORD2
+ES_fill_tcp_data	KEYWORD2
+ES_enc28j60Init	KEYWORD2
+ES_enc28j60clkout	KEYWORD2
+ES_enc28j60PhyWrite	KEYWORD2
+ES_enc28j60PacketReceive	KEYWORD2
+ES_init_ip_arp_udp_tcp	KEYWORD2
+ES_eth_type_is_arp_and_my_ip	KEYWORD2
+ES_make_arp_answer_from_request	KEYWORD2
+ES_eth_type_is_ip_and_my_ip	KEYWORD2
+ES_make_echo_reply_from_request	KEYWORD2
+ES_make_tcp_synack_from_syn	KEYWORD2
+ES_init_len_info	KEYWORD2
+ES_get_tcp_data_pointer	KEYWORD2
+ES_make_tcp_ack_from_any	KEYWORD2
+ES_make_tcp_ack_with_data	KEYWORD2
+ES_make_arp_request	KEYWORD2
+ES_arp_packet_is_myreply_arp	KEYWORD2
+ES_tcp_client_send_packet	KEYWORD2
+ES_tcp_get_dlength	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
