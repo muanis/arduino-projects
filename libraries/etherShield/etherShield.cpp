@@ -3,7 +3,7 @@
 extern "C" {
 	#include "enc28j60.h"
 	#include "ip_arp_udp_tcp.h"
- 
+
 }
 #include "EtherShield.h"
 
@@ -11,7 +11,7 @@ extern "C" {
 EtherShield::EtherShield(){
 }
 
-uint16_t EtherShield::ES_fill_tcp_data_p(uint8_t *buf,uint16_t pos, const prog_char *progmem_s){
+uint16_t EtherShield::ES_fill_tcp_data_p(uint8_t *buf,uint16_t pos, const char *progmem_s PROGMEM){
 	return fill_tcp_data_p(buf, pos, progmem_s);
 }
 
@@ -60,7 +60,7 @@ void EtherShield::ES_make_echo_reply_from_request(uint8_t *buf,uint16_t len){
 
 void EtherShield::ES_make_tcp_synack_from_syn(uint8_t *buf){
 	make_tcp_synack_from_syn(buf);
-}	
+}
 
 void EtherShield::ES_init_len_info(uint8_t *buf){
 	init_len_info(buf);
@@ -86,24 +86,12 @@ uint8_t EtherShield::ES_arp_packet_is_myreply_arp ( uint8_t *buf ){
 	return arp_packet_is_myreply_arp (buf);
 }
 
-void EtherShield::ES_tcp_client_send_packet(uint8_t *buf,uint16_t dest_port, uint16_t src_port, uint8_t flags, uint8_t max_segment_size, 
+void EtherShield::ES_tcp_client_send_packet(uint8_t *buf,uint16_t dest_port, uint16_t src_port, uint8_t flags, uint8_t max_segment_size,
 	uint8_t clear_seqck, uint16_t next_ack_num, uint16_t dlength, uint8_t *dest_mac, uint8_t *dest_ip){
-	
+
 	tcp_client_send_packet(buf, dest_port, src_port, flags, max_segment_size, clear_seqck, next_ack_num, dlength,dest_mac,dest_ip);
 }
 
 uint16_t EtherShield::ES_tcp_get_dlength( uint8_t *buf ){
 	return tcp_get_dlength(buf);
 }
-
-
-
-
-
-
-
-
-
-
-
-
