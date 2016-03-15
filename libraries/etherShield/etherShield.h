@@ -29,9 +29,9 @@
 class EtherShield
 {
   public:
-  
+
   	EtherShield();
-	  uint16_t ES_fill_tcp_data_p(uint8_t *buf,uint16_t pos, const prog_char *progmem_s);
+	  uint16_t ES_fill_tcp_data_p(uint8_t *buf,uint16_t pos, const char *progmem_s PROGMEM);
 	  uint16_t ES_fill_tcp_data(uint8_t *buf,uint16_t pos, const char *s);
 		void ES_enc28j60Init(uint8_t* macaddr);
 		void ES_enc28j60clkout(uint8_t clk);
@@ -47,15 +47,14 @@ class EtherShield
 		uint16_t ES_get_tcp_data_pointer(void);
 		void ES_make_tcp_ack_from_any(uint8_t *buf);
 		void ES_make_tcp_ack_with_data(uint8_t *buf,uint16_t dlen);
-		
-		// new web client functions 
+
+		// new web client functions
 		void ES_make_arp_request(uint8_t *buf, uint8_t *server_ip);
 		uint8_t ES_arp_packet_is_myreply_arp ( uint8_t *buf );
-		void ES_tcp_client_send_packet(uint8_t *buf,uint16_t dest_port, uint16_t src_port, uint8_t flags, uint8_t max_segment_size, 
+		void ES_tcp_client_send_packet(uint8_t *buf,uint16_t dest_port, uint16_t src_port, uint8_t flags, uint8_t max_segment_size,
 	uint8_t clear_seqck, uint16_t next_ack_num, uint16_t dlength, uint8_t *dest_mac, uint8_t *dest_ip);
 		uint16_t ES_tcp_get_dlength( uint8_t *buf );
 
-};	
-		
-#endif
+};
 
+#endif
